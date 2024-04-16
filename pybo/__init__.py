@@ -46,7 +46,9 @@ migrate = Migrate()
 def create_app():
     app = Flask(__name__)
     # orm +
-    app.config.from_object(config)
+    # app.config.from_object(config)
+    # 변경
+    app.config.from_envvar('APP_CONFIG_FILE')
     
     # orm
     db.init_app(app)
