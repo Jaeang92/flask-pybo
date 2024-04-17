@@ -9,9 +9,6 @@ bp = Blueprint('main', __name__, url_prefix='/')
 def hello_pybo():
     return 'Hello, Pybo!!'
 
-@bp.route('/')
-def index():
-    return redirect(url_for('question._list'))
 
 @bp.route('/')
 def index():
